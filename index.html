@@ -72,6 +72,36 @@
             color: #2c3e50;
         }
 
+        /* MENÚ DESPLEGABLE */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         /* TERCER MENÚ: Footer */
         .footer-nav {
             background: #2c3e50;
@@ -154,7 +184,14 @@
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#historia">Historia</a></li>
             <li><a href="#actualidad">Actualidad</a></li>
-            <li><a href="#futuro">Futuro</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Más</a>
+                <div class="dropdown-content">
+                    <a href="#futuro">Futuro</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="#sobre-nosotros">Sobre Nosotros</a>
+                </div>
+            </li>
         </ul>
     </nav>
 
@@ -177,40 +214,39 @@
         <article id="historia">
             <h2>Historia de la Inteligencia Artificial</h2>
             <div class="timeline">
-    <div class="timeline-item">
-        <div class="timeline-year">1950</div>
-        <p>Alan Turing desarrolla el "Test de Turing", una prueba para evaluar la capacidad de una máquina para exhibir un comportamiento inteligente, sentando las bases para la filosofía de la IA.</p>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-year">1956</div>
-        <p>Conferencia de Dartmouth: Se acuña el término "Inteligencia Artificial" y se establece como campo de estudio. Esta conferencia reunió a los pioneros de la IA, incluyendo a John McCarthy y Marvin Minsky.</p>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-year">1964-1970</div>
-        <p>Desarrollo de los primeros chatbots y sistemas expertos. ELIZA, creado por Joseph Weizenbaum, se convierte en uno de los primeros programas en procesar lenguaje natural y simular conversaciones humanas.</p>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-year">1972</div>
-        <p>Se lanza el programa SHRDLU, que puede entender y manipular objetos en un entorno virtual a través de comandos en lenguaje natural, demostrando avances significativos en la comprensión del lenguaje por parte de las máquinas.</p>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-year">1980</div>
-        <p>Surge el primer boom de la IA, impulsado por el desarrollo de sistemas expertos que fueron utilizados en campos como la medicina y la ingeniería, ofreciendo soluciones basadas en el conocimiento especializado.</p>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-year">1997</div>
-        <p>La supercomputadora Deep Blue de IBM derrota al campeón mundial de ajedrez Garry Kasparov, marcando un hito en el desarrollo de la inteligencia artificial y demostrando su capacidad para competir en juegos complejos.</p>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-year">2011</div>
-        <p>IBM lanza Watson, un sistema de inteligencia artificial que gana el concurso de televisión Jeopardy!, mostrando habilidades avanzadas en procesamiento de lenguaje natural y análisis de datos.</p>
-    </div>
-    <div class="timeline-item">
-        <div class="timeline-year">2018</div>
-        <p>Se introduce el modelo BERT de Google, que mejora significativamente la comprensión del lenguaje natural en tareas de búsqueda, permitiendo una mejor interpretación de las consultas de los usuarios.</p>
-    </div>
-</div>
-
+                <div class="timeline-item">
+                    <div class="timeline-year">1950</div>
+                    <p>Alan Turing desarrolla el "Test de Turing", una prueba para evaluar la capacidad de una máquina para exhibir un comportamiento inteligente, sentando las bases para la filosofía de la IA.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1956</div>
+                    <p>Conferencia de Dartmouth: Se acuña el término "Inteligencia Artificial" y se establece como campo de estudio. Esta conferencia reunió a los pioneros de la IA, incluyendo a John McCarthy y Marvin Minsky.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1964-1970</div>
+                    <p>Desarrollo de los primeros chatbots y sistemas expertos. ELIZA, creado por Joseph Weizenbaum, se convierte en uno de los primeros programas en procesar lenguaje natural y simular conversaciones humanas.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1972</div>
+                    <p>Se lanza el programa SHRDLU, que puede entender y manipular objetos en un entorno virtual a través de comandos en lenguaje natural, demostrando avances significativos en la comprensión del lenguaje por parte de las máquinas.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1980</div>
+                    <p>Surge el primer boom de la IA, impulsado por el desarrollo de sistemas expertos que fueron utilizados en campos como la medicina y la ingeniería, ofreciendo soluciones basadas en el conocimiento especializado.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1997</div>
+                    <p>La supercomputadora Deep Blue de IBM derrota al campeón mundial de ajedrez Garry Kasparov, marcando un hito en el desarrollo de la inteligencia artificial y demostrando su capacidad para competir en juegos complejos.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2011</div>
+                    <p>IBM lanza Watson, un sistema de inteligencia artificial que gana el concurso de televisión Jeopardy!, mostrando habilidades avanzadas en procesamiento de lenguaje natural y análisis de datos.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2018</div>
+                    <p>Se introduce el modelo BERT de Google, que mejora significativamente la comprensión del lenguaje natural en tareas de búsqueda, permitiendo una mejor interpretación de las consultas de los usuarios.</p>
+                </div>
+            </div>
         </article>
 
         <article id="actualidad">
@@ -219,69 +255,43 @@
             
             <h3>Aplicaciones Actuales</h3>
             <ul>
-    <hr>
-    <h4><li>Asistentes virtuales como Siri, Alexa y Google Assistant</li></h4>
-    <hr>
-    <p>Los asistentes virtuales utilizan inteligencia artificial para interactuar con los usuarios mediante el lenguaje natural. Estos sistemas pueden realizar tareas como responder preguntas, controlar dispositivos inteligentes en el hogar y gestionar calendarios, proporcionando una experiencia más fluida y eficiente en la vida cotidiana.</p>
-    <hr>
-    <h4><li>Sistemas de recomendación en plataformas de streaming</li></h4>
-    <hr>
-    <p>Los sistemas de recomendación utilizan algoritmos de IA para analizar las preferencias de los usuarios y ofrecer contenido personalizado en plataformas como Netflix y Spotify. Estos sistemas ayudan a los usuarios a descubrir nuevas películas, series o música que se alinean con sus gustos, mejorando así la experiencia del usuario.</p>
-    <hr>
-    <h4><li>Vehículos autónomos</li></h4>
-    <hr>
-    <p>Los vehículos autónomos utilizan inteligencia artificial y sensores para navegar sin intervención humana. Mediante el uso de técnicas de aprendizaje automático y procesamiento de datos en tiempo real, estos vehículos pueden tomar decisiones en la carretera, mejorar la seguridad vial y optimizar el tráfico.</p>
-    <hr>
-    <h4><li>Diagnóstico médico y análisis de imágenes</li></h4>
-    <hr>
-    <p>La inteligencia artificial se está utilizando cada vez más en el ámbito de la salud para ayudar en el diagnóstico médico y el análisis de imágenes. Algoritmos avanzados pueden detectar anomalías en radiografías, resonancias magnéticas y otros tipos de imágenes, proporcionando a los médicos herramientas valiosas para tomar decisiones informadas.</p>
-    <hr>
-    <h4><li>Sistemas de traducción automática</li></h4>
-    <hr>
-    <p>Los sistemas de traducción automática utilizan inteligencia artificial para traducir texto y voz entre diferentes idiomas. Herramientas como Google Translate han mejorado significativamente en precisión y fluidez, facilitando la comunicación entre personas de diferentes culturas y lenguas.</p>
-</ul>
-
+                <hr>
+                <h4><li>Asistentes virtuales como Siri, Alexa y Google Assistant</li></h4>
+                <hr>
+                <h4><li>Recomendaciones personalizadas en plataformas como Netflix y Amazon</li></h4>
+                <hr>
+                <h4><li>Automatización de procesos en la industria y la manufactura</li></h4>
+                <hr>
+                <h4><li>Análisis predictivo en finanzas y marketing</li></h4>
+            </ul>
         </article>
 
         <article id="futuro">
-            <h2>El Futuro de la IA</h2>
-            <p>Las perspectivas futuras de la IA son vastas y prometedoras. Se espera que la tecnología continúe evolucionando en varias direcciones:</p>
-            
-            <h3>Tendencias Emergentes</h3>
-            <ul>
-    <hr>
-    <h4><li>Computación cuántica y su impacto en la IA</li></h4>
-    <hr>
-    <p>La computación cuántica es una nueva frontera en la tecnología de la información que utiliza principios de la mecánica cuántica para procesar información de manera fundamentalmente diferente a las computadoras clásicas. En lugar de utilizar bits, que pueden ser 0 o 1, la computación cuántica utiliza qubits, que pueden representar múltiples estados simultáneamente gracias a la superposición y el entrelazamiento cuántico.</p>
-    <hr>
-    <h4><li>Desarrollo de IA más ética y transparente</li></h4>
-    <hr>
-    <p>Con el aumento del uso de la IA, también ha surgido la preocupación sobre su uso ético y la necesidad de transparencia. Esto incluye cómo se desarrollan los algoritmos, cómo se toman las decisiones y el impacto de estas decisiones en la sociedad. Las organizaciones están trabajando para garantizar que los sistemas de IA sean responsables de sus decisiones, reduciendo el sesgo y la discriminación en los algoritmos.</p>
-    <hr>
-    <h4><li>Integración de IA en todos los aspectos de la vida cotidiana</li></h4>
-    <hr>
-    <p>La IA está cada vez más integrada en la vida diaria, afectando cómo interactuamos con la tecnología y con el mundo que nos rodea. Ejemplos incluyen asistentes virtuales, dispositivos inteligentes en el hogar y aplicaciones en el sector salud que permiten diagnósticos más precisos.</p>
-    <hr>
-    <h4><li>Avances en el procesamiento del lenguaje natural (NLP)</li></h4>
-    <hr>
-    <p>El procesamiento del lenguaje natural ha avanzado significativamente, permitiendo interacciones más naturales entre humanos y máquinas. Modelos como GPT-3 han mejorado la generación de texto y la traducción automática, facilitando la comunicación en diversos idiomas.</p>
-    <hr>
-    <h4><li>Mejoras en la interacción humano-máquina</li></h4>
-    <hr>
-    <p>La interacción entre humanos y máquinas está evolucionando, impulsada por avances en IA y diseño de interfaces. Las interfaces conversacionales y el reconocimiento de voz han hecho que interactuar con dispositivos sea más intuitivo y personalizado, mejorando la experiencia del usuario.</p>
-</ul>
+            <h2>Futuro de la Inteligencia Artificial</h2>
+            <p>El futuro de la inteligencia artificial es prometedor y plantea diversas oportunidades y desafíos. Se espera que la IA siga evolucionando y expandiendo su alcance en diversas industrias, pero también plantea cuestiones éticas y de seguridad que deben ser abordadas.</p>
 
+            <h3>Desafíos a Considerar</h3>
+            <ul>
+                <hr>
+                <h4><li>La ética en el uso de la IA y el impacto en el empleo.</li></h4>
+                <hr>
+                <h4><li>La necesidad de regulación y políticas que guíen el desarrollo de la IA.</li></h4>
+                <hr>
+                <h4><li>La seguridad en la implementación de sistemas de IA en infraestructuras críticas.</li></h4>
+                <hr>
+                <h4><li>La equidad en el acceso y uso de la tecnología de IA.</li></h4>
+            </ul>
         </article>
     </div>
 
     <!-- TERCER MENÚ: Footer -->
-    <nav class="footer-nav">
+    <footer class="footer-nav">
         <ul>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-            <li><a href="#privacidad">Política de Privacidad</a></li>
-            <li><a href="#terminos">Términos de Uso</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#actualidad">Actualidad</a></li>
+            <li><a href="#futuro">Futuro</a></li>
         </ul>
-    </nav>
+    </footer>
 </body>
 </html>
